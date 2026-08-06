@@ -210,7 +210,7 @@ def train_aliengo(headless=True):
     Cfg.commands.gaitwise_curricula = True
 
     # ---- Create environment ----
-    env = VelocityTrackingEasyEnv(sim_device='cuda:0', headless=False, cfg=Cfg)
+    env = VelocityTrackingEasyEnv(sim_device='cuda:0', headless=headless, cfg=Cfg)
 
     # ---- Log parameters ----
     logger.log_params(AC_Args=vars(AC_Args), PPO_Args=vars(PPO_Args), RunnerArgs=vars(RunnerArgs), Cfg=vars(Cfg))
