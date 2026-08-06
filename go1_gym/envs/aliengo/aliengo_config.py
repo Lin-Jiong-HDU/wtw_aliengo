@@ -43,6 +43,7 @@ def config_aliengo(Cnfg: Union[Cfg, Meta]):
     _.self_collisions = 1               # 1 to disable
     _.flip_visual_attachments = False
     _.fix_base_link = False
+    _.collapse_fixed_joints = False     # Keep foot bodies (AlienGo has foot_fixed joints)
 
     _ = Cnfg.rewards
     _.soft_dof_pos_limit = 0.9
