@@ -209,6 +209,9 @@ def train_aliengo(headless=True):
     Cfg.commands.binary_phases = True
     Cfg.commands.gaitwise_curricula = True
 
+    # ---- Disable video recording for headless server ----
+    Cfg.env.record_video = False
+
     # ---- Create environment ----
     env = VelocityTrackingEasyEnv(sim_device='cuda:0', headless=headless, cfg=Cfg)
 
